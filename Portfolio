@@ -214,19 +214,25 @@ section{
   gap:60px;
 }
 
+/* ✅ FIXED CONTACT LOGO ONLY */
 .contact-logo{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  background:rgba(255,255,255,0.2);
+  width:150px;
+  height:150px;
+  border-radius:50%;        /* makes the container circular */
+  background:rgba(255,255,255,0.25);
   display:flex;
   align-items:center;
   justify-content:center;
-  font-family:'Pacifico',cursive;
-  font-size:48px;
-  color:#fff;
   flex-shrink:0;
+  overflow:hidden;          /* ensures the image doesn't overflow */
 }
+
+.contact-logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;         /* makes the image fill the circle */
+}
+/* ✅ END FIX */
 
 .contact-info{
   max-width:600px;
@@ -248,6 +254,10 @@ section{
   .contact-container{
     flex-direction:column;
     align-items:flex-start;
+  }
+
+  .contact-logo{
+    margin-bottom:20px;
   }
 }
 
@@ -325,24 +335,24 @@ footer{
   <h2>MY WORKS</h2>
 
   <div class="gallery">
-    <h3>Fan Arts</h3>
+    <h3>Commissions</h3>
     <div class="images">
-      <img src="https://via.placeholder.com/300">
-      <img src="https://via.placeholder.com/300">
-      <img src="https://via.placeholder.com/300">
-      <img src="https://via.placeholder.com/300">
-      <img src="https://via.placeholder.com/300">
+      <img src="My artworks-20251224T004425Z-3-001/My artworks/daylight.png">
+      <img src="My artworks-20251224T004425Z-3-001/My artworks/marriage.png">
+      <img src="My artworks-20251224T004425Z-3-001/My artworks/Akira.png">
+      <img src="My artworks-20251224T004425Z-3-001/My artworks/Besties.jpg">
+      <img src="My artworks-20251224T004425Z-3-001/My artworks/Multo.png">
     </div>
   </div>
 
   <div class="gallery">
-    <h3>Commissions</h3>
+    <h3>Fan Arts</h3>
     <div class="images">
-      <img src="https://via.placeholder.com/300">
-      <img src="https://via.placeholder.com/300">
-      <img src="https://via.placeholder.com/300">
-      <img src="https://via.placeholder.com/300">
-      <img src="https://via.placeholder.com/300">
+      <img src="My artworks-20251224T004425Z-3-001/My artworks/fennekin.png">
+      <img src="My artworks-20251224T004425Z-3-001/My artworks/alastor.png">
+      <img src="My artworks-20251224T004425Z-3-001/My artworks/monochrome.png">
+      <img src="My artworks-20251224T004425Z-3-001/My artworks/Greninjaenme.png">
+      <img src="My artworks-20251224T004425Z-3-001/My artworks/odette.png">
     </div>
   </div>
 </section>
@@ -352,13 +362,14 @@ footer{
   <h2>Contacts</h2>
 
   <div class="contact-container">
-    <div class="contact-logo">W</div>
+    <div class="contact-logo">
+      <img src="My artworks-20251224T004425Z-3-001/My artworks/Logo.png">
+    </div>
 
     <div class="contact-info">
       <p><strong>Email:</strong> deannicaeneria105@email.com</p>
       <p><strong>Instagram:</strong> @dnc_enr</p>
       <p><strong>Facebook:</strong> Deannica Eneria</p>
-      <p><strong>TikTok:</strong> wiffles497</p>
     </div>
   </div>
 </section>
@@ -389,3 +400,4 @@ window.addEventListener("scroll", () => {
 
 </body>
 </html>
+
